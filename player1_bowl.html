@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="position-fixed top-50 start-50 translate-middle"
+      style="opacity: 20%; height: 80%; z-index: -1"
+    >
+      <figure>
+        <img src="images/8.png" />
+      </figure>
+    </div>
+    <nav class="navbar" style="background-color: black">
+      <div class="container-fluid">
+        <h4
+          style="
+            font-family: cursive;
+            font-size: xx-large;
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(235, 153, 153);
+          "
+        >
+          <img
+            src="images/2.png"
+            alt="Logo"
+            width="50"
+            height="44"
+            class="d-inline-block align-text-top"
+          />
+          Cricket Game
+        </h4>
+      </div>
+    </nav>
+    <div
+      class="position-absolute top-50 start-50 translate-middle"
+      style="
+        border: 4px solid black;
+        border-style: outset;
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+        margin-top: 30px;
+        padding: 15px;
+      "
+    >
+      <h1
+        id="p1_bat"
+        style="
+          font-family: cursive;
+          font-weight: bold;
+          font-style: cursive;
+          color: firebrick;
+          text-align: center;
+          margin-bottom: 10px;
+        "
+      >
+        Player 1 Bowling
+      </h1>
+      <div class="d-grid gap-2">
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label
+              for="inputText6"
+              class="col-form-label"
+              style="
+                font-family: cursive;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+              "
+              >Total Score :
+              <b id="text4" style="color: rgb(7, 109, 7); font-size: xx-large"
+                >0</b
+              ></label
+            >
+          </div>
+        </div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label
+              for="inputText6"
+              class="col-form-label"
+              style="
+                font-family: cursive;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+              "
+              >Balls Left <b style="color: firebrick" id="balls"> 6 </b></label
+            >
+          </div>
+        </div>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label
+              id="player1"
+              for="inputText6"
+              class="label1"
+              style="
+                font-family: cursive;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+              "
+              >Player 1 Bowling</label
+            >
+          </div>
+          <div class="col-auto">
+            <div class="input-group mb-3">
+              <input
+                id="text5"
+                type="tel"
+                class="form-control"
+                min="1"
+                max="6"
+                placeholder="Type between 1 to 6..."
+                style="
+                  font-family: cursive;
+                  font-weight: bold;
+                  font-style: italic;
+                  font-size: x-large;
+                "
+              />
+              <button
+                class="btn btn-outline-success"
+                type="button"
+                id="play1"
+                onclick="scored()"
+              >
+                Score
+              </button>
+            </div>
+          </div>
+        </div>
+        <h3
+          id="score2"
+          style="
+            font-family: cursive;
+            font-size: x-large;
+            font-weight: bold;
+            text-align: left;
+            margin: 5px;
+          "
+        >
+          You Scored: 0
+        </h3>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label
+              id="computer1"
+              for="inputText6"
+              class="col-form-label"
+              style="
+                font-family: cursive;
+                font-size: x-large;
+                font-weight: bold;
+                font-style: italic;
+              "
+              >Player 2 Batting
+              <span
+                class="spinner-border text-warning"
+                role="status"
+                style="margin-left: 30px"
+              ></span
+            ></label>
+          </div>
+        </div>
+        <button
+          class="btn btn-dark"
+          type="button"
+          style="
+            font-family: cursive;
+            font-size: x-large;
+            font-weight: bold;
+            margin: 5px;
+          "
+        >
+          <a class="nav-link" href="player2_bowl.html" id="score3" onclick="session()"
+            >Commentary</a
+          >
+        </button>
+      </div>
+    </div>
+    <script src="match2.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
