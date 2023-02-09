@@ -2,9 +2,12 @@
 var playername2 = sessionStorage.getItem("playerName2");
 document.getElementById("p2_bat").innerHTML = playername2 + " Batting";
 document.getElementById("player2").innerHTML = playername2 + " Batting";
+document.getElementById("src").innerHTML = playername2 + " Scored";
 function session() {
-  var targetscore = document.getElementById("text4").innerHTML;
-  sessionStorage.setItem("targetScore", targetscore);
+  var chasescore = document.getElementById("text4").innerHTML;
+  sessionStorage.setItem("chaseScore", chasescore);
+  var totalballs2 =document.getElementById("balls").innerHTML;
+  sessionStorage.setItem("totalBalls2", totalballs2);
 }
 var targetscore = sessionStorage.getItem("targetScore");
 document.getElementById("run1").innerHTML = parseInt(targetscore) + 1 + " runs";
@@ -53,7 +56,7 @@ function scored() {
       document.getElementById("computer1").innerHTML = playername + "";
       let m = document.getElementById("computer1").innerHTML;
       alert(
-        m + " WON!!\n You Won By " + (parseInt(x) - parseInt(d)) + " runs."
+        m + " WON!!\n You Won By " + (parseInt(x) - parseInt(d) -1) + " runs."
       );
       var c = document.getElementById("score3").innerHTML;
     } else if (flag == 1 && parseInt(d) < parseInt(x)) {
@@ -63,7 +66,7 @@ function scored() {
       alert(
         m +
           " WON!!\n Won the Match By " +
-          (parseInt(x) - parseInt(d)) +
+          (parseInt(x) - parseInt(d) -1) +
           " runs."
       );
       document.getElementById("score3").innerHTML = "OUT!!!";

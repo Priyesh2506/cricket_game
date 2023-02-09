@@ -2,9 +2,12 @@
 var playername = sessionStorage.getItem("playerName");
 document.getElementById("p1_bat").innerHTML = playername + " Bowling";
 document.getElementById("player1").innerHTML = playername + " Bowling";
+document.getElementById("src").innerHTML = playername + " Bowled";
 function session() {
   var targetscore = document.getElementById("text4").innerHTML;
   sessionStorage.setItem("targetScore", targetscore);
+  var totalballs = document.getElementById("balls").innerHTML;
+  sessionStorage.setItem("totalBalls", totalballs);
 }
 //Player 1 Batting in Single Player
 function scored() {
