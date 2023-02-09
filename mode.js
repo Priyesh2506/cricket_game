@@ -20,9 +20,9 @@ var p2name = sessionStorage.getItem("p2Name");
 var whowon = sessionStorage.getItem("whoWon");
 //document.getElementById("p1").innerHTML = whowon;
 let x = whowon.localeCompare(p1name);
-console.log(x);
+//console.log(x);
 let y = whowon.localeCompare(p2name);
-console.log(y);
+//console.log(y);
 if (parseInt(x) == 0) {
     //alert(p1name);
   document.getElementById("p1").innerHTML = p1name;
@@ -33,15 +33,8 @@ if (parseInt(x) == 0) {
   document.getElementById("p2").innerHTML = p1name;
 }
 function toss2() {
-  if (whowon.localeCompare(p1name) === 0) {
     var playername = document.getElementById("p1").innerHTML;
     sessionStorage.setItem("playerName", playername);
     var playername2 = document.getElementById("p2").innerHTML;
     sessionStorage.setItem("playerName2", playername2);
-  } else if (whowon.localeCompare(p2name) === 0) {
-    var playername2 = document.getElementById("p1").innerHTML;
-    sessionStorage.setItem("playerName2", playername2);
-    var playername = document.getElementById("p2").innerHTML;
-    sessionStorage.setItem("playerName", playername);
   }
-}
