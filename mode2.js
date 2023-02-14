@@ -1,18 +1,3 @@
-function single_player() {
-  var p1name = document.getElementById("text1").value;
-  sessionStorage.setItem("p1Name", p1name);
-  var p2name = "Computer";
-  sessionStorage.setItem("p2Name", p2name);
-}
-//Two Player
-function players() {
-  var p1name = document.getElementById("text2").value;
-  sessionStorage.setItem("p1Name", p1name);
-  var p2name = document.getElementById("text3").value;
-  sessionStorage.setItem("p2Name", p2name);
-}
-
-// document.getElementById("p1").innerHTML = whowon;
 var tossresult = sessionStorage.getItem("tossResult");
 document.getElementById("toss2").innerHTML = tossresult + " ";
 var p1name = sessionStorage.getItem("p1Name");
@@ -29,8 +14,10 @@ if (parseInt(x) == 0) {
   document.getElementById("p2").innerHTML = p2name;
 } else if (parseInt(y) == 0) {
   //alert(p2name);
-  document.getElementById("p1").innerHTML = p2name;
-  document.getElementById("p2").innerHTML = p1name;
+  document.getElementById("p1").innerHTML = p1name;
+  document.getElementById("p2").innerHTML = p2name;
+  document.getElementById("head2").innerHTML = "Bowl";
+  document.getElementById("tail2").innerHTML = "Bat";
 }
 // var comchoose = sessionStorage.getItem("comChoose");
 // if (parseInt(comchoose) == 1) {

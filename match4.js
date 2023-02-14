@@ -1,8 +1,8 @@
 //Single Player Mode
-var playername2 = sessionStorage.getItem("playerName2");
-document.getElementById("p2_bat").innerHTML = playername2 + " Bowling";
-document.getElementById("player2").innerHTML = playername2 + " Bowling";
-document.getElementById("src").innerHTML = playername2 + " Bowled";
+var playername = sessionStorage.getItem("playerName");
+document.getElementById("p2_bat").innerHTML = playername + " Bowling";
+document.getElementById("player2").innerHTML = playername + " Bowling";
+document.getElementById("src").innerHTML = playername + " Bowled";
 function session() {
   var chasescore = document.getElementById("text4").innerHTML;
   sessionStorage.setItem("chaseScore", chasescore);
@@ -13,8 +13,8 @@ var targetscore = sessionStorage.getItem("targetScore");
 document.getElementById("run1").innerHTML = parseInt(targetscore) + 1 + " runs";
 //Player 2 Batting in Single Player
 function scored() {
-  var playername = sessionStorage.getItem("playerName");
-  document.getElementById("computer1").innerHTML = playername;
+  var playername2 = sessionStorage.getItem("playerName2");
+  document.getElementById("computer1").innerHTML = playername2;
   function getRandom(array) {
     const index = Math.floor(Math.random() * array.length);
     const item = array[index];
@@ -41,8 +41,8 @@ function scored() {
     if (parseInt(a) == parseInt(f)) {
       flag = 1;
     } else {
-      var playername = sessionStorage.getItem("playerName");
-      document.getElementById("computer1").innerHTML = playername;
+      var playername2 = sessionStorage.getItem("playerName2");
+      document.getElementById("computer1").innerHTML = playername2;
       let l = document.getElementById("computer1").innerHTML;
       document.getElementById("score3").innerHTML = l + " has Scored " + f;
       d = parseInt(d) + parseInt(f);
@@ -53,22 +53,22 @@ function scored() {
     document.getElementById("balls").innerHTML = e;
     if (e < 1 && parseInt(d) < parseInt(x)) {
       alert(
-        playername2 + " WON!!\n You Won By " + (parseInt(x) - parseInt(d) -1) + " runs."
+        playername + " WON!!\n You Won By " + (parseInt(x) - parseInt(d) -1) + " runs."
       );
       var c = document.getElementById("score3").innerHTML;
     } else if (flag == 1 && parseInt(d) < parseInt(x)) {
       alert(
-        playername2 +
+        playername +
           " WON!!\n Won the Match By " +
           (parseInt(x) - parseInt(d) -1) +
           " runs."
       );
       document.getElementById("score3").innerHTML = "OUT!!!";
-    } else if (parseInt(d) > parseInt(x)) {
-      var playername = sessionStorage.getItem("playerName");
-      document.getElementById("computer1").innerHTML = playername + "";
+    } else if (parseInt(d) >= parseInt(x)) {
+      var playername2 = sessionStorage.getItem("playerName2");
+      document.getElementById("computer1").innerHTML = playername2 + "";
       let m = document.getElementById("computer1").innerHTML;
       alert(m + " WON!!!\n Won the Match. ");
     }
-  }, 1000);
+  }, 2000);
 }

@@ -15,5 +15,5 @@ if(parseInt(targetscore)>parseInt(chasescore)){
     document.getElementById("results").innerHTML = "!! "+playername2 + " won by " + x +" runs!!"
 }
 else{
-    document.getElementById("results").innerHTML = "!! "+playername1 + " won the match!!"
+    document.getElementById("results").innerHTML = "!! "+playername + " won the match!!"
 }

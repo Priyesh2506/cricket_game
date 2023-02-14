@@ -59,8 +59,28 @@ function tossed2() {
   }
 }
 function toss_mode() {
+  //var a = document.getElementById("player2").innerHTML;
   var tossresult=document.getElementById("who").innerHTML + document.getElementById("choose").innerHTML;
   sessionStorage.setItem("tossResult", tossresult);
   var whowon = document.getElementById("who").innerHTML;
   sessionStorage.setItem("whoWon", whowon);
+  // function getRandom(array) {
+  //   const index = Math.floor(Math.random() * array.length);
+  //   const item = array[index];
+  //   return item;
+  // }
+  // const array = [1, 2];
+  // let match = a.localeCompare(whowon);
+  // if(parseInt(match) == 0){
+  //   alert(match);
+  //   let f = getRandom(array);
+  //   if(parseInt(f)==1){
+  //     var comchoose = 1;
+  //     sessionStorage.setItem("comChoose", comchoose);
+  //   }
+  //   else{
+  //     var comchoose = 2;
+  //     sessionStorage.setItem("comChoose", comchoose);
+  //   }
+  // }
 }
